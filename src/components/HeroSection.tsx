@@ -1,7 +1,6 @@
 const HeroSection = () => {
     return (
         <div className="container mx-auto py-10">
-            <div className="min-h-screen">
                 <div className="hero-content flex-col lg:flex-row">
                     
                     <div>
@@ -21,7 +20,6 @@ const HeroSection = () => {
                         src="/src/assets/banner-stack.png"
                     />
                 </div>
-            </div>
         </div>
     );
 };

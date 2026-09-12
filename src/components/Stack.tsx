@@ -1,5 +1,5 @@
 import type IStack from "../types/stackType";
-
+import { FaStar } from "react-icons/fa";
 interface StackProps {
     stack: IStack[]
 }
@@ -8,7 +8,7 @@ const Stack = ({ stack }: StackProps) => {
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {
-                stack.map((item) => {
+                stack.map((item:IStack) => {
                     return <div className="w-full max-w-sm rounded-2xl border border-slate-200 bg-white p-6 shadow-sm overflow-auto">
 
                         {/* Top */}
@@ -50,14 +50,14 @@ const Stack = ({ stack }: StackProps) => {
                             </span>
 
                             <span className="flex items-center gap-1 font-medium text-slate-700">
-                                <span className="text-amber-400">★</span>
+                                <FaStar className="text-yellow-400" />
                                 {item.rating}
                             </span>
 
                         </div>
 
                         {/* Button */}
-                        <button className="mt-5 w-full rounded-lg bg-slate-950 py-3 text-sm font-medium text-white transition hover:bg-slate-800">
+                        <button className="cursor-pointer mt-5 w-full rounded-lg bg-slate-950 py-3 text-sm font-medium text-white transition hover:bg-[#DB2777] ">
                             Add to Stack
                         </button>
 

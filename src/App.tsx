@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar"
 import Technologies from "./components/Technologies"
 import type IStack from "./types/stackType"
 
-const stackFetch = async() : Promise<IStack>=>{
+const stackFetch = async() : Promise<IStack[]>=>{
   const res = await fetch('/technology.json')
   const data = await res.json();
   return data;

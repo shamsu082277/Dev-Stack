@@ -1,11 +1,19 @@
-import { use } from "react";
+import type IStack from "../types/stackType";
 
-const Stack = ({stackPromise}) => {
-    console.log(stackPromise);
-    const stack = use(stackPromise)
+interface StackProps {
+    stack: IStack[]
+}
+const Stack = ({stack}:StackProps) => {
     console.log(stack);
     return (
         <div>
+            {
+                stack.map((item)=>{
+                    return <div key={item.id}>
+                        {item.name}
+                    </div>
+                })
+            }
         </div>
     );
 };

@@ -1,5 +1,14 @@
+import { use } from "react";
+import type IStack from "../types/stackType";
 import Stack from "./Stack";
-const Technologies = ({stackPromise}) => {
+
+interface StackProps{
+    stackPromise: Promise<IStack[]>
+}
+
+const Technologies = ({stackPromise}:StackProps) => {
+    const stack = use(stackPromise)
+
     return (
         <div className="container mx-auto">
             <div>
@@ -8,7 +17,7 @@ const Technologies = ({stackPromise}) => {
             </div>
             {/* Technologies card */}
             <div>
-            <Stack stackPromise = {stackPromise}></Stack>
+            <Stack stack = {stack}></Stack>
             </div>
         </div>
     );

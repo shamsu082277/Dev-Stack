@@ -1,2 +1,29 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+/* Hero text Gradient color */
+.hero-text-gradient-color{
+    color: #ff5722;
+  background-image: linear-gradient(
+    45deg,
+    #ff5722 ,
+    #d81b7e 50%,
+    #7c3aed 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.explore-btn{
+    background-image: linear-gradient(
+    45deg,
+    #F97316,
+    #EC4899 100%
+  );
+
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+}

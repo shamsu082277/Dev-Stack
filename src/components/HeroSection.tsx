@@ -1,7 +1,8 @@
 const HeroSection = () => {
     return (
-        <div className="container mx-auto py-10">
-                <div className="hero-content flex-col lg:flex-row">
+        <div className="">
+                {/* <div className="hero-content flex-col lg:flex-row p-0"> */}
+                <div className="hero-content flex-col lg:flex-row container mx-auto justify-between p-0">
                     
                     <div>
                         <h1 className="text-5xl font-bold ">Build Your Ideal <br></br><span className="hero-text-gradient-color">Development Stack</span> </h1>

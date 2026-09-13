@@ -7,7 +7,7 @@ const Stack = ({ stack }: StackProps) => {
     return (
         <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {
-                stack.map((item:IStack) => {
+                stack.map((item: IStack) => {
                     return <div key={item.id} className="w-full max-w-sm rounded-2xl border border-slate-200 bg-white p-6 shadow-sm overflow-auto">
 
                         {/* Top */}
@@ -18,7 +18,20 @@ const Stack = ({ stack }: StackProps) => {
                                 className="h-12 w-12 object-contain"
                             />
 
-                            <span className="rounded-full border border-sky-100 bg-sky-50 px-4 py-1.5 text-sm font-medium text-sky-500">
+                            <span
+                                className={`rounded-full border px-4 py-1.5 text-sm font-medium ${item.badge === "Popular" || item.badge === "Modern"
+                                        ? "border-sky-100 bg-sky-50 text-sky-500"
+                                        : item.badge === "Essential" || item.badge === "Fast"
+                                            ? "border-green-100 bg-green-50 text-green-500"
+                                            : item.badge === "AI Ready"
+                                                ? "border-orange-100 bg-orange-50 text-orange-500"
+                                                : item.badge === "NoSQL"
+                                                    ? "border-purple-100 bg-purple-50 text-purple-500"
+                                                    : item.badge === "Top SQL"
+                                                        ? "border-pink-100 bg-pink-50 text-pink-500"
+                                                        : "border-yellow-100 bg-yellow-50 text-yellow-500"
+                                    }`}
+                            >
                                 {item.badge}
                             </span>
                         </div>

@@ -1,17 +1,56 @@
+import type { Dispatch, SetStateAction } from "react";
 import type IStack from "../types/stackType";
 import { FaStar } from "react-icons/fa";
+import { toast } from "react-toastify";
+
 interface StackProps {
-    stack: IStack[]
+    stack: IStack[];
+    selectedStack: IStack[];
+    setSelectedStack: Dispatch<SetStateAction<IStack[]>>;
 }
-const Stack = ({ stack }: StackProps) => {
+
+const Stack = ({
+    stack,
+    selectedStack,
+    setSelectedStack,
+}: StackProps) => {
+
+    const handleStack = (item: IStack) => {
+
+        // Check if already added
+        const alreadyAdded = selectedStack.some(
+            (technology) => technology.id === item.id
+        );
+
+        if (alreadyAdded) {
+            toast.warning(`${item.name} is already added!`);
+            return;
+        }
+
+        // Add technology
+        setSelectedStack([...selectedStack, item]);
+
+        toast.success(`${item.name} added successfully!`);
+    };
+
     return (
-        <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {
-                stack.map((item: IStack) => {
-                    return <div key={item.id} className="w-full max-w-sm rounded-2xl border border-slate-200 bg-white p-6 shadow-sm overflow-auto">
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+
+            {stack.map((item: IStack) => {
+
+                const isSelected = selectedStack.some(
+                    (technology) => technology.id === item.id
+                );
+
+                return (
+                    <div
+                        key={item.id}
+                        className="w-full max-w-sm overflow-auto rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
+                    >
 
                         {/* Top */}
                         <div className="flex items-start justify-between">
+
                             <img
                                 src={item.icon}
                                 alt={item.name}
@@ -19,18 +58,21 @@ const Stack = ({ stack }: StackProps) => {
                             />
 
                             <span
-                                className={`rounded-full border px-4 py-1.5 text-sm font-medium ${item.badge === "Popular" || item.badge === "Modern"
+                                className={`rounded-full border px-4 py-1.5 text-sm font-medium ${
+                                    item.badge === "Popular" ||
+                                    item.badge === "Modern"
                                         ? "border-sky-100 bg-sky-50 text-sky-500"
-                                        : item.badge === "Essential" || item.badge === "Fast"
-                                            ? "border-green-100 bg-green-50 text-green-500"
-                                            : item.badge === "AI Ready"
-                                                ? "border-orange-100 bg-orange-50 text-orange-500"
-                                                : item.badge === "NoSQL"
-                                                    ? "border-purple-100 bg-purple-50 text-purple-500"
-                                                    : item.badge === "Top SQL"
-                                                        ? "border-pink-100 bg-pink-50 text-pink-500"
-                                                        : "border-yellow-100 bg-yellow-50 text-yellow-500"
-                                    }`}
+                                        : item.badge === "Essential" ||
+                                          item.badge === "Fast"
+                                        ? "border-green-100 bg-green-50 text-green-500"
+                                        : item.badge === "AI Ready"
+                                        ? "border-orange-100 bg-orange-50 text-orange-500"
+                                        : item.badge === "NoSQL"
+                                        ? "border-purple-100 bg-purple-50 text-purple-500"
+                                        : item.badge === "Top SQL"
+                                        ? "border-pink-100 bg-pink-50 text-pink-500"
+                                        : "border-yellow-100 bg-yellow-50 text-yellow-500"
+                                }`}
                             >
                                 {item.badge}
                             </span>
@@ -38,13 +80,15 @@ const Stack = ({ stack }: StackProps) => {
 
                         {/* Content */}
                         <div className="mt-6">
-                            <h3 className="text-2xl font-bold hero-text-gradient-color">
+
+                            <h3 className="hero-text-gradient-color text-2xl font-bold">
                                 {item.name}
                             </h3>
 
                             <p className="mt-3 min-h-18 text-sm leading-6 text-slate-500">
                                 {item.description}
                             </p>
+
                         </div>
 
                         {/* Divider */}
@@ -69,13 +113,24 @@ const Stack = ({ stack }: StackProps) => {
                         </div>
 
                         {/* Button */}
-                        <button className="cursor-pointer mt-5 w-full rounded-lg gradient-btn py-3 text-sm font-medium text-white transition">
-                            Add to Stack
+                        <button
+                            onClick={() => handleStack(item)}
+                            disabled={isSelected}
+                            className={`mt-5 w-full rounded-lg py-3 text-sm font-medium text-white transition ${
+                                isSelected
+                                    ? "cursor-not-allowed bg-gray-400"
+                                    : "gradient-btn cursor-pointer"
+                            }`}
+                        >
+                            {isSelected
+                                ? "✓ Added to Stack"
+                                : "Add to Stack"}
                         </button>
 
                     </div>
-                })
-            }
+                );
+            })}
+
         </div>
     );
 };

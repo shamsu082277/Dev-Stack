@@ -26,7 +26,7 @@ A simple and interactive technology stack builder where users can explore differ
 git clone https://github.com/shamsu082277/Dev-Stack.git
 
 ### 2. Go to the Project Folder
-cd your-repository
+cd Dev-Stack
 
 ### 3. Install Dependencies
 npm install

@@ -50,16 +50,6 @@ const MyStack = ({
                     </p>
                 </div>
 
-                {/* Remove All */}
-                {selectedStack.length > 0 && (
-                    <button
-                        onClick={handleRemoveAll}
-                        className="cursor-pointer text-sm font-medium text-red-500 hover:text-red-600"
-                    >
-                        Remove All
-                    </button>
-                )}
-
             </div>
             {selectedStack.length === 0 && (
                 <div className="mt-4 rounded-2xl border border-dashed border-slate-400 p-5 text-center">
@@ -115,7 +105,20 @@ const MyStack = ({
 
                 </div>
             )}
-
+    {/* Remove All */}
+                
+                    {selectedStack.length > 0 && (
+                        <div className="flex justify-center items-center p-2 rounded-xl border-2 text-lg  border-red-500
+                        mt-5">
+                    <button
+                        onClick={handleRemoveAll}
+                        className="cursor-pointer text-sm font-medium text-red-500 hover:text-red-600"
+                    >
+                        Remove All
+                    </button>
+                    </div>
+                )}
+                
         </div>
     );
 };

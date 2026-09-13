@@ -3,6 +3,7 @@ import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
 import Technologies from "./components/Technologies";
 import type IStack from "./types/stackType";
+import Footer from "./components/Footer";
 
 const stackFetch = async (): Promise<IStack[]> => {
   const res = await fetch("/technology.json");
@@ -24,6 +25,7 @@ function App() {
           </div>}>
         <Technologies stackPromise={stackPromise} />
       </Suspense>
+      <Footer></Footer>
     </>
   );
 }

@@ -16,9 +16,9 @@ const Technologies = ({stackPromise}:StackProps) => {
             <p>Pick one technology per category to build your ideal stack.</p>
             </div>
             {/* Technologies card */}
-            <div className="grid grid-cols-12 gap-10">
-            <div className="col-span-9"><Stack stack = {stack}></Stack></div>
-            <div className="col-span-3">
+            <div className="grid grid-cols-12 gap-10 justify-center">
+            <div className="col-span-12 md:col-span-9"><Stack stack = {stack}></Stack></div>
+            <div className="col-span-12 md:col-span-3">
                 <div className="rounded-2xl border border-slate-200 shadow-sm p-6">
                     <h3 className="text-2xl font-semibold">Your Stack</h3>
                     <p>No technologies selected yet.</p>

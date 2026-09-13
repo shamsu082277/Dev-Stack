@@ -4,12 +4,11 @@ interface StackProps {
     stack: IStack[]
 }
 const Stack = ({ stack }: StackProps) => {
-    console.log(stack);
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {
                 stack.map((item:IStack) => {
-                    return <div className="w-full max-w-sm rounded-2xl border border-slate-200 bg-white p-6 shadow-sm overflow-auto">
+                    return <div key={item.id} className="w-full max-w-sm rounded-2xl border border-slate-200 bg-white p-6 shadow-sm overflow-auto">
 
                         {/* Top */}
                         <div className="flex items-start justify-between">
@@ -26,7 +25,7 @@ const Stack = ({ stack }: StackProps) => {
 
                         {/* Content */}
                         <div className="mt-6">
-                            <h3 className="text-2xl font-bold text-slate-900">
+                            <h3 className="text-2xl font-bold hero-text-gradient-color">
                                 {item.name}
                             </h3>
 
@@ -57,7 +56,7 @@ const Stack = ({ stack }: StackProps) => {
                         </div>
 
                         {/* Button */}
-                        <button className="cursor-pointer mt-5 w-full rounded-lg bg-slate-950 py-3 text-sm font-medium text-white transition hover:bg-[#DB2777] ">
+                        <button className="cursor-pointer mt-5 w-full rounded-lg gradient-btn py-3 text-sm font-medium text-white transition">
                             Add to Stack
                         </button>
 

@@ -12,7 +12,7 @@ const HeroSection = () => {
                             next project.
                         </p>
                         <div className="flex gap-4">
-                            <button className="btn btn-primary py-5 min-w-48 rounded-lg explore-btn">Explore Technologies</button>
+                            <button className="btn btn-primary py-5 min-w-48 rounded-lg gradient-btn">Explore Technologies</button>
                             <button className="btn py-5 rounded-lg min-w-48"> Learn More</button>
                         </div>
                     </div>

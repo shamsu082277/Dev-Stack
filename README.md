@@ -35,6 +35,7 @@ npm install
 npm run dev
 
 ##  Project Live link
+https://dev-stack-shamsu082277.netlify.app/
 
 ##  Project Preview
 

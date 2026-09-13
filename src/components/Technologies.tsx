@@ -15,7 +15,7 @@ const Technologies = ({ stackPromise }: StackProps) => {
 
     return (
         <div className="container mx-auto">
-            <div className="mb-10">
+            <div className="mb-10 p-10 lg:p-0">
                 <h2 className="pb-3 text-4xl font-bold">
                     Explore the{" "}
                     <span className="text-[#EC4899]">Technologies</span>

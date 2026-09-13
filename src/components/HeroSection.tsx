@@ -2,7 +2,7 @@ const HeroSection = () => {
     return (
         <div className="">
                 {/* <div className="hero-content flex-col lg:flex-row p-0"> */}
-                <div className="hero-content flex-col lg:flex-row container mx-auto justify-between p-0">
+                <div className="hero-content flex-col p-10 lg:p-0 lg:flex-row container mx-auto justify-between">
                     
                     <div>
                         <h1 className="text-5xl font-bold ">Build Your Ideal <br></br><span className="hero-text-gradient-color">Development Stack</span> </h1>

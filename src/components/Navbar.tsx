@@ -33,8 +33,8 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end flex gap-4">
-                <a href="/">Sign In</a>
-                <a className="btn rounded-full text-white bg-[#DB2777] p-5 ">Button</a>
+                <a href="/" className="text-[10px] lg:text-[16px]">Sign In</a>
+                <a className="text-[10px] lg:text-[16px] btn rounded-full text-white bg-[#DB2777] p-2 lg:p-5 ">Sign Up</a>
             </div>
         </div>
         </div>

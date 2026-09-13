@@ -15,19 +15,19 @@ const Technologies = ({ stackPromise }: StackProps) => {
 
     return (
         <div className="container mx-auto">
-            <div className="mb-10 p-10 lg:p-0">
-                <h2 className="pb-3 text-4xl font-bold">
+            <div className="lg:mb-10 p-10 lg:p-0">
+                <h2 className="pb-3 text-2xl lg:text-4xl font-bold text-center lg:text-left">
                     Explore the{" "}
                     <span className="text-[#EC4899]">Technologies</span>
                 </h2>
 
-                <p>
+                <p className="text-[12px] lg:text-sm text-center lg:text-left">
                     Pick one technology per category to build your ideal stack.
                 </p>
             </div>
 
             {/* Technologies + Your Stack */}
-            <div className="grid grid-cols-12 justify-center gap-10">
+            <div className="grid grid-cols-12 justify-center mx-auto gap-10">
 
                 {/* Technology Cards */}
                 <div className="col-span-12 md:col-span-9">

@@ -34,13 +34,13 @@ const MyStack = ({
     };
 
     return (
-        <div className="rounded-2xl border border-slate-200 p-6 shadow-sm">
+        <div className="mx-auto w-full max-w-sm rounded-2xl border border-slate-200 p-6 shadow-sm">
 
             {/* Header */}
             <div className="flex items-center justify-between">
 
                 <div>
-                    <h3 className="text-2xl font-semibold">
+                    <h3 className="text-lg lg:text-2xl font-semibold">
                         Your Stack
                     </h3>
 
@@ -52,7 +52,7 @@ const MyStack = ({
 
             </div>
             {selectedStack.length === 0 && (
-                <div className="mt-4 rounded-2xl border border-dashed border-slate-400 p-5 text-center">
+                <div className="mt-4 rounded-2xl border border-dashed border-slate-400 p-2 lg:p-5 text-center">
                     <p className="text-sm text-slate-500">
                         Your stack is empty.
                     </p>

@@ -21,6 +21,26 @@ A simple and interactive technology stack builder where users can explore differ
 
 ---
 
+## 🚀 How to Download and Run the Project
+
+### 1. Clone the Repository
+git clone https://github.com/shamsu082277/Dev-Stack.git
+
+### 2. Go to the Project Folder
+cd your-repository
+
+### 3. Install Dependencies
+npm install
+
+### 4. Run the Project
+npm run dev
+
+##  Project Live link
+
+##  Project Preview
+
+![DevStack Screenshot](/public/website-preview.png)
+
 # 📚 React Related Questions & Answers
 
 ### 1. What is JSX, and why is it used in React?

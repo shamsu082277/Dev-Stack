@@ -5,7 +5,7 @@ const Navbar = () => {
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-                        <img src="/src/assets/hamburger.png" alt="" />
+                        <img src="./assets/hamburger.png" alt="" />
                     </div>
                     <ul
                         tabIndex={-1}
@@ -17,10 +17,10 @@ const Navbar = () => {
                     <li><a>Contact</a></li>
                     </ul>
                 </div>
-                <a href="/" className="hidden lg:flex"><img src="/src/assets/logo-text.png" alt="" /></a>
+                <a href="/" className="hidden lg:flex"><img src="/assets/logo-text.png" alt="Logo" /></a>
             </div>
             <div className="flex lg:hidden">
-                <a href="/"><img src="/src/assets/logo-text.png" alt="" /></a>
+                <a href="/"><img src="/public/assets/logo-text.png" alt="" /></a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 font-semibold">

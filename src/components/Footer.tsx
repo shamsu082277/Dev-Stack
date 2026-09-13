@@ -3,7 +3,7 @@ const Footer = () => {
         <div className="mx-auto mt-10 max-w-sm md:container">
             <footer className="footer sm:footer-horizontal text-base-content py-8 md:py-15">
                 <aside className="flex flex-col justify-center items-center md:items-baseline gap-4">
-                    <img src="/src/assets/logo-text.png" alt="" />
+                    <img src="/assets/logo-text.png" alt="" />
                     <p className="text-gray-400 w-3/4 text-center md:text-left">
                         Curated tools, technologies, and resources for developers building modern software.
                     </p>

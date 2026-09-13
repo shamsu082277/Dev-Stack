@@ -20,7 +20,6 @@ A simple and interactive technology stack builder where users can explore differ
 - Vite
 
 ---
-
 ## 🚀 How to Download and Run the Project
 
 ### 1. Clone the Repository
